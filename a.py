@@ -6,10 +6,10 @@ st.set_page_config(layout="wide")
 
 # Data lirik dan timing
 lirik = [
-    ("Berilah sebuah pertanda bila", 30.0),
+    ("Berilah sebuah pertanda bila", 28.0),
     ("Bila kau menyimpan rasa yg sama", 35.0),
     ("Tunjukkanlah Anindya", 40.0),
-    ("Berikan aku secercah harapan", 45.0),
+    ("Berikan aku secercah harapan Anindya", 45.0),
 ]
 
 # CSS background dan confetti
@@ -72,7 +72,7 @@ h1 {
 
 # Render CSS & animasi
 st.markdown(css_style, unsafe_allow_html=True)
-st.title("🎵 Nada - Nada")
+st.title("🎵 Surat Eletronikku 🎵")
 
 # Fungsi delay ketikan
 def get_typing_delay(line_length, interval):
