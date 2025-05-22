@@ -6,7 +6,7 @@ st.set_page_config(layout="wide")
 
 # Data lirik dan timing
 lirik = [
-    ("Surat Eletronikku", 14.0),
+    ("Surat Eletronikku", 5.0),
     ("Teruntuk Yang dibelakang layar ini", 14.0),
     ("Berilah sebuah pertanda bila", 28.0),
     ("Bila kau menyimpan rasa yg sama", 35.0),
@@ -108,19 +108,21 @@ if st.button("Klik Sini!"):
         start_time = time.time()
 
         for i, (line, start_sec) in enumerate(lirik):
-    # tunggu sampai waktunya
-         while time.time() - start_time < start_sec:
-             time.sleep(0.05)
-    # hitung jeda sampai baris berikutnya
-    next_sec = lirik[i+1][1] if i+1 < len(lirik) else start_sec + 5
-    interval = next_sec - start_sec
+            while True:
+                elapsed = time.time() - start_time
+                if elapsed >= start_sec:
+                    break
+                time.sleep(0.05)
 
-    teks_tertulis = ""
-    for c in line:
-        teks_tertulis += c
-        lyrics_container.markdown(f"<div class='lyrics-text'>{teks_tertulis}</div>", unsafe_allow_html=True)
-        time.sleep(0.12)  # delay tetap, atau bisa disesuaikan lagi
+            next_start_sec = lirik[i + 1][1] if i < len(lirik) - 1 else start_sec + 4
+            interval = next_start_sec - start_sec
+            typing_delay = get_typing_delay(len(line), interval)
 
+            teks_tertulis = ""
+            for c in line:
+                teks_tertulis += c
+                lyrics_container.markdown(f"<div class='lyrics-text'>{teks_tertulis}</div>", unsafe_allow_html=True)
+                time.sleep(typing_delay)
 
         # st.success("Selesai!")
        # st.snow()
