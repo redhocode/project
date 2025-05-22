@@ -122,6 +122,6 @@ if st.button("Klik Sini!"):
                 time.sleep(typing_delay)
 
         # st.success("Selesai!")
-
+        st.snow()
 else:
-    st.info("Klik tombol **Klik Sini!** untuk mulai. lalu Player YouTube akan muncul di kanan.")
+    st.info("Klik tombol **Klik Sini!** untuk mulai. lalu Play Videonya.")
