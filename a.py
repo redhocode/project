@@ -72,7 +72,7 @@ h1 {
 
 # Render CSS & animasi
 st.markdown(css_style, unsafe_allow_html=True)
-st.title("🎵 Surat Eletronikku 🎵")
+st.title("🎵 Surat Eletronikku")
 
 # Fungsi delay ketikan
 def get_typing_delay(line_length, interval):
