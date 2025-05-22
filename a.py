@@ -7,7 +7,7 @@ st.set_page_config(layout="wide")
 # Data lirik dan timing
 lirik = [
     ("Surat Eletronikku", 5.0),
-    ("Teruntuk Yang dibelakang layar ini", 14.0),
+    ("Teruntuk Yang menatap layar ini", 14.0),
     ("Berilah sebuah pertanda bila", 28.0),
     ("Bila kau menyimpan rasa yg sama", 35.0),
     ("Tunjukkanlah Anindya", 40.0),
