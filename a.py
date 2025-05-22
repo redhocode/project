@@ -9,7 +9,8 @@ lirik = [
     ("Berilah sebuah pertanda bila", 28.0),
     ("Bila kau menyimpan rasa yg sama", 35.0),
     ("Tunjukkanlah Anindya", 40.0),
-    ("Berikan aku secercah harapan Anindya", 45.0),
+    ("berilahku secercah harapan, Anindya", 45.0),
+    
 ]
 
 # CSS background dan confetti
@@ -122,6 +123,6 @@ if st.button("Klik Sini!"):
                 time.sleep(typing_delay)
 
         # st.success("Selesai!")
-        st.snow()
+       # st.snow()
 else:
     st.info("Klik tombol **Klik Sini!** untuk mulai. lalu Play Videonya.")
